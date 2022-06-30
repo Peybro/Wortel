@@ -1,4 +1,8 @@
+import { GlobalState } from "./../stores/StateStore";
+
 export default function NewGame({ onNewGame, word, success }) {
+  const darkMode = GlobalState.useState((s) => s.darkMode);
+
   return (
     <div className="modal-dialog">
       <div className="modal-content">
