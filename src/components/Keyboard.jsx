@@ -1,5 +1,6 @@
 import { GlobalState } from "./../stores/StateStore";
 import useDetectKeyboardOpen from "use-detect-keyboard-open";
+import { BsFillCheckCircleFill, BsFillBackspaceFill } from "react-icons/bs";
 
 export default function Keyboard({ onCheckWord }) {
   const round = GlobalState.useState((s) => s.round);
@@ -81,10 +82,8 @@ export default function Keyboard({ onCheckWord }) {
                       (letter === "Back" && wordList[round].length === 0)
                     }
                   >
-                    {letter === "Enter" && (
-                      <i className="bi bi-check-circle"></i>
-                    )}
-                    {letter === "Back" && <i className="bi bi-backspace"></i>}
+                    {letter === "Enter" && <BsFillCheckCircleFill />}
+                    {letter === "Back" && <BsFillBackspaceFill />}
                     {letter !== "Enter" && letter !== "Back" && letter}
                   </button>
                 );

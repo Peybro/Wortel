@@ -13,7 +13,6 @@ import wordListRaw from "./wordList";
 const wordList = wordListRaw.split(" ");
 
 export default function App() {
-  // const { round, userWordList, darkMode, secretWord } = GlobalState.useState();
   const round = GlobalState.useState((s) => s.round);
   const userWordList = GlobalState.useState((s) => s.wordList);
   const darkMode = GlobalState.useState((s) => s.darkMode);
