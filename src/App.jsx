@@ -101,9 +101,14 @@ export default function App() {
     });
 
     if (
-      word.every((letter, i) => {
-        letter === secretWord[i];
-      })
+      // word.every((letter,i)=>{
+      //   letter === secretWord[i]
+      // })
+      word[0] === secretWord[0] &&
+      word[1] === secretWord[1] &&
+      word[2] === secretWord[2] &&
+      word[3] === secretWord[3] &&
+      word[4] === secretWord[4]
     ) {
       setWordFound(true);
       setFinish(true);
